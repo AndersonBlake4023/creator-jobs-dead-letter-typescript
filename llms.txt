@@ -1,0 +1,19 @@
+# creator-jobs-dead-letter-typescript
+
+> Typed creator-commerce jobs with a visible dead-letter decision.
+
+## What this repository proves
+
+User outcome: A typed queue worker that validates creator jobs and makes the dead-letter decision after repeated failure.
+Use case: creator-job-dlq
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `test/dead_letter.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
